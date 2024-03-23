@@ -21,7 +21,10 @@ export default defineConfig({
         items: [
           { text: "史诗遭遇mod介绍", link: "/01-介绍/EE介绍.md" },
           { text: "史诗遭遇附属mod介绍", link: "/01-介绍/附属mod.md" },
-          { text: "玩EE该安装哪几个mod？", link: "/01-介绍/玩EE该安装哪几个mod？.md" },
+          {
+            text: "玩EE该安装哪几个mod？",
+            link: "/01-介绍/玩EE该安装哪几个mod？.md",
+          },
           { text: "难度选择（必看）", link: "/01-介绍/难度.md" },
         ],
       },
@@ -40,8 +43,11 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/zhangwh754/epic-encounter-doc" },
+      {
+        icon: "github",
+        link: "https://github.com/zhangwh754/epic-encounter-doc",
+      },
     ],
   },
-  outDir: "./dist"
+  base: "/epic-encounter-doc/",
 });
