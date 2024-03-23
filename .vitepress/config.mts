@@ -45,6 +45,17 @@ export default defineConfig({
         link: "/06-伟大锻造炉/index.md",
         items: [],
       },
+      {
+        text: "12-新人常见问题",
+        link: "/12-新人常见问题/index.md",
+        items: [
+          { text: "战斗相关问题", link: "/12-新人常见问题/战斗相关问题.md" },
+          {
+            text: "非战斗相关问题",
+            link: "/12-新人常见问题/非战斗相关问题.md",
+          },
+        ],
+      },
     ],
 
     socialLinks: [
@@ -53,6 +64,10 @@ export default defineConfig({
         link: "https://github.com/zhangwh754/epic-encounter-doc",
       },
     ],
+
+    search: {
+      provider: "local",
+    },
   },
   base: "/epic-encounter-doc/",
   head: [["link", { rel: "icon", href: "/epic-encounter-doc/favicon.ico" }]],
