@@ -43,4 +43,5 @@ export default defineConfig({
       { icon: "github", link: "https://github.com/zhangwh754/epic-encounter-doc" },
     ],
   },
+  outDir: "./dist"
 });
