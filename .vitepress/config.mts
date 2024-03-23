@@ -40,6 +40,11 @@ export default defineConfig({
           { text: "mod排序", link: "/02-安装/mod排序.md" },
         ],
       },
+      {
+        text: "06-伟大锻造炉",
+        link: "/06-伟大锻造炉/index.md",
+        items: [],
+      },
     ],
 
     socialLinks: [

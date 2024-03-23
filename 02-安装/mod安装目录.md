@@ -1,3 +1,7 @@
+---
+prev: false
+---
+
 # mod安装目录
 
 windows系统，mod安装目录在`我的文档\Larian Studios\Divinity Original Sin 2 Definitive Edition\mods`目录下
