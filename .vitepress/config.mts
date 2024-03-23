@@ -50,4 +50,5 @@ export default defineConfig({
     ],
   },
   base: "/epic-encounter-doc/",
+  head: [["link", { rel: "icon", href: "/epic-encounter-doc/favicon.ico" }]],
 });
