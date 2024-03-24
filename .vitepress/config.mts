@@ -68,6 +68,10 @@ export default defineConfig({
     search: {
       provider: "local",
     },
+
+    editLink: {
+      pattern: 'https://github.com/zhangwh754/epic-encounter-doc/edit/main/:path'
+    }
   },
   base: "/epic-encounter-doc/",
   head: [["link", { rel: "icon", href: "/epic-encounter-doc/favicon.ico" }]],
