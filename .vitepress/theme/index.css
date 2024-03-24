@@ -1,0 +1,10 @@
+/* .vitepress/theme/index.css */
+
+.medium-zoom-overlay {
+  color: red;
+  z-index: 999;
+}
+
+.medium-zoom-image {
+  z-index: 1000;
+}
