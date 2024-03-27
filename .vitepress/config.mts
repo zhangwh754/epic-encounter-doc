@@ -46,6 +46,18 @@ export default defineConfig({
         items: [],
       },
       {
+        text: "09-技能一览",
+        link: "/09-技能一览/index.md",
+        items: [
+          { text: "技能章节序言", link: "/09-技能一览/index.md" },
+          { text: "白嫖技能", link: "/09-技能一览/白嫖技能.md" },
+          { text: "叠层技能", link: "/09-技能一览/叠层技能.md" },
+          { text: "破甲技能", link: "/09-技能一览/破甲技能.md" },
+          { text: "注能技能", link: "/09-技能一览/注能技能.md" },
+          { text: "极端减抗技能", link: "/09-技能一览/极端减抗技能.md" },
+        ],
+      },
+      {
         text: "12-新人常见问题",
         link: "/12-新人常见问题/index.md",
         items: [
