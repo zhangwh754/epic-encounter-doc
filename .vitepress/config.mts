@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import markdownItTaskLists from "markdown-it-task-lists";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -39,6 +40,11 @@ export default defineConfig({
           { text: "安装Derpy", link: "/02-安装/Derpy安装.md" },
           { text: "mod排序", link: "/02-安装/mod排序.md" },
         ],
+      },
+      {
+        text: "05-bd分享",
+        link: "/05-bd分享/异彩秘源火法.md",
+        items: [{ text: "异彩秘源火法", link: "/05-bd分享/异彩秘源火法.md" }],
       },
       {
         text: "06-伟大锻造炉",
@@ -82,9 +88,15 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/zhangwh754/epic-encounter-doc/edit/main/:path'
-    }
+      pattern:
+        "https://github.com/zhangwh754/epic-encounter-doc/edit/main/:path",
+    },
   },
   base: "/epic-encounter-doc/",
   head: [["link", { rel: "icon", href: "/epic-encounter-doc/favicon.ico" }]],
+  markdown: {
+    config: (md) => {
+      md.use(markdownItTaskLists, { enabled: true });
+    },
+  },
 });
