@@ -43,8 +43,11 @@ export default defineConfig({
       },
       {
         text: "05-bd分享",
-        link: "/05-bd分享/异彩秘源火法.md",
-        items: [{ text: "EE-异彩秘源火法", link: "/05-bd分享/异彩秘源火法.md" }],
+        link: "/05-bd分享/index.md",
+        items: [
+          { text: "EE-异彩秘源火法", link: "/05-bd分享/异彩秘源火法.md" },
+          { text: "EE-嘲讽百夫长", link: "/05-bd分享/嘲讽百夫长.md" }
+        ],
       },
       {
         text: "06-伟大锻造炉",
