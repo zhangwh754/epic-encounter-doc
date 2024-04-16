@@ -46,7 +46,7 @@ export default defineConfig({
         link: "/05-bd分享/index.md",
         items: [
           { text: "EE-异彩秘源火法", link: "/05-bd分享/异彩秘源火法.md" },
-          { text: "EE-嘲讽百夫长", link: "/05-bd分享/嘲讽百夫长.md" }
+          { text: "EE-嘲讽百夫长", link: "/05-bd分享/嘲讽百夫长.md" },
         ],
       },
       {
@@ -96,7 +96,24 @@ export default defineConfig({
     },
   },
   base: "/epic-encounter-doc/",
-  head: [["link", { rel: "icon", href: "/epic-encounter-doc/favicon.ico" }]],
+  head: [
+    ["link", { rel: "icon", href: "/epic-encounter-doc/favicon.ico" }],
+    [
+      "script",
+      {
+        async: "",
+        src: "https://www.googletagmanager.com/gtag/js?id=GTM-5HQ7M44R",
+      },
+    ],
+    [
+      "script",
+      {},
+      `window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GTM-5HQ7M44R');`,
+    ],
+  ],
   markdown: {
     config: (md) => {
       md.use(markdownItTaskLists, { enabled: true });
