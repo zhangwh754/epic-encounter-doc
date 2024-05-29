@@ -132,7 +132,24 @@ export default defineConfig({
     },
   },
   base: "/epic-encounter-doc/",
-  head: [["link", { rel: "icon", href: "/epic-encounter-doc/favicon.ico" }]],
+  head: [
+    ["link", { rel: "icon", href: "/epic-encounter-doc/favicon.ico" }],
+    [
+      "script",
+      {
+        async: "",
+        src: "https://www.googletagmanager.com/gtag/js?id=GTM-5HQ7M44R",
+      },
+    ],
+    [
+      "script",
+      {},
+      `window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GTM-5HQ7M44R');`,
+    ],
+  ],
   markdown: {
     config: (md) => {
       md.use(markdownItTaskLists, { enabled: true });
