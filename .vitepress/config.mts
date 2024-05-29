@@ -46,7 +46,8 @@ export default defineConfig({
         link: "/05-bd分享/index.md",
         items: [
           { text: "EE-异彩秘源火法", link: "/05-bd分享/异彩秘源火法.md" },
-          { text: "EE-嘲讽百夫长", link: "/05-bd分享/嘲讽百夫长.md" }
+          { text: "EE-嘲讽百夫长", link: "/05-bd分享/嘲讽百夫长.md" },
+          { text: "EE-希望纯洁火电法", link: "/05-bd分享/纯洁火电法.md" },
         ],
       },
       {
@@ -88,6 +89,41 @@ export default defineConfig({
 
     search: {
       provider: "local",
+      options: {
+        miniSearch: {
+          /**
+           * @type {import('minisearch').SearchOptions}
+           * @default
+           * { fuzzy: 0.2, prefix: true, boost: { title: 4, text: 2, titles: 1 } }
+           */
+          searchOptions: {
+            fields: ["text"],
+            fuzzy: 0.2,
+            prefix: true,
+            boost: { title: 4, text: 2, titles: 1 },
+            processTerm: (term) => {
+              // @ts-ignore
+              const segmenter = Intl.Segmenter
+                ? // @ts-ignore
+                  new Intl.Segmenter("zh", {
+                    granularity: "word",
+                  })
+                : null;
+
+              if (!segmenter) return term;
+              console.log("分词");
+
+              const tokens = [];
+              for (const seg of segmenter.segment(term)) {
+                // @ts-ignore
+                tokens.push(seg.segment);
+              }
+              return tokens;
+            },
+            /* ... */
+          },
+        },
+      },
     },
 
     editLink: {
